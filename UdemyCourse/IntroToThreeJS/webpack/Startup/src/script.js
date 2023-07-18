@@ -23,11 +23,11 @@ const pinkMesh = new THREE.Mesh(pinkCircle, pink);
 
 
 // Add mesh to scene
-scene.add(purpMesh);
+scene.add(purpMesh, pinkMesh);
 
 // must be done after mesh is created 
-gsap.to(purpMesh.position, { duration: 1, delay: 1, x: 2 });
-gsap.to(purpMesh.position, { duration: 2, delay: 2, x:-1 });
+// gsap.to(purpMesh.position, { duration: 1, delay: 1, x: 2 });
+// gsap.to(purpMesh.position, { duration: 2, delay: 2, x:-1 });
 // Camera
 const aspect = {
     width: window.innerWidth,
@@ -65,8 +65,8 @@ const animate = () => {
     
     // ! Testing linear function
     // sin and cos (cosign) function
-    // purpMesh.position.x = Math.sin(elapsedTime);
-    // purpMesh.position.y = Math.cos(elapsedTime);
+    purpMesh.position.x = Math.sin(elapsedTime * 2);
+    purpMesh.position.y = Math.cos(elapsedTime * 2);
 
     // tan function
     // pinkMesh.position.x = Math.tan(elapsedTime) * 2;

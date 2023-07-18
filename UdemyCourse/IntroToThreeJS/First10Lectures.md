@@ -14,4 +14,27 @@
     - The scene, renderer, meshes, camera are all objects
     - We want objects the inherit from the Object3D class 
     - Search for object in docs and it will say at the top if it inherits from Object3D or not 
-    
+
+
+
+# Animation 
+    - Create an animate function and call it. It will run every frame 
+    - Use elapsed time to animate based on time instead of a users frame rate so its more consistent (just like in unreal)
+    - Use rotation to rotate objects
+    - MORE NOTES in THREEJS/UdemyCourse/IntroToThreeJS/Animation
+
+
+# Webpack
+
+
+# Mathmatics & Gsap
+
+
+# Look At
+    - A method on object3D class 
+    - Rotate the object to face a specific point in the 3D space it accepts a Vector3 as a param
+    - You can pass another meshes position as the arg and the object will turn towards that object 
+
+# Responsive 
+
+# Cameras
