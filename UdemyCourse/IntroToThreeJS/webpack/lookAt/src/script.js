@@ -1,6 +1,11 @@
 import "./style.css";
 import * as THREE from "three";
 
+const cursor = {
+  x: 0,
+  y: 0,
+};
+
 //Scene
 const scene = new THREE.Scene();
 
@@ -45,20 +50,6 @@ yellowMesh.lookAt(whiteMesh.position);
 
 
 
-// ! Mouse listener
-const cursor = {
-  x: 0,
-  y: 0,
-};
-
-window.addEventListener("mousemove", (event) => {
-  // console.log(event.clientX);
-  // console.log(event.clientY);
-  cursor.x = event.clientX / window.innerWidth - 0.5;
-  cursor.y = event.clientY / window.innerHeight - 0.5;
-});
-
-
 //Camera
 const aspect = {
   width: window.innerWidth,
@@ -77,10 +68,19 @@ renderer.setSize(aspect.width, aspect.height);
 //Clock Class
 const clock = new THREE.Clock();
 
+
+// ! Mouse listener
+window.addEventListener("mousemove", (event) => {
+  // console.log(event.clientX);
+  // console.log(event.clientY);
+  cursor.x = event.clientX / window.innerWidth - 0.5;
+  cursor.y = event.clientY / window.innerHeight - 0.5;
+});
+
 const animate = () => {
   //GetElapsedTime
   const elapsedTime = clock.getElapsedTime();
-
+  
   // Lookat
   greenMesh.lookAt(new THREE.Vector3(cursor.x, -cursor.y, 1));
 

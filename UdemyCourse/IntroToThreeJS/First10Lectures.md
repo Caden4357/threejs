@@ -21,7 +21,7 @@
     - Create an animate function and call it. It will run every frame 
     - Use elapsed time to animate based on time instead of a users frame rate so its more consistent (just like in unreal)
     - Use rotation to rotate objects
-    - MORE NOTES in THREEJS/UdemyCourse/IntroToThreeJS/Animation
+    - MORE NOTES in THREEJS/UdemyCourse/IntroToThreeJS/Animation project
 
 
 # Webpack
@@ -34,7 +34,19 @@
     - A method on object3D class 
     - Rotate the object to face a specific point in the 3D space it accepts a Vector3 as a param
     - You can pass another meshes position as the arg and the object will turn towards that object 
+    - *MORE NOTES in THREEJS/UdemyCourse/IntroToThreeJS/webpack/lookAt project
 
 # Responsive 
-
+    - Add a resize event listener to the window object 
+    - Update aspect width and height 
+    - Update camera 
+        - camera.aspect = aspect.width / aspect.height;
+        - camera.updateProjectionMatrix();
+    -Update Renderer 
+        - renderer.setSize(aspect.width, aspect.height);
+        - renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    EXAMPLE in THREEJS/UdemyCourse/IntroToThreeJS/webpack/responsive project
 # Cameras
+    - 5 types of cameras 
+    - look at the docs for more info
+    
