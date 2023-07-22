@@ -16,3 +16,5 @@
     - Textures are images that are wrapped around the geometry.
     - You can use a texture loader to load in a texture.
     - More notes in introToThreeJS/Textures
+    
+# Materials & Debugging: Refer to the notes in introToThreeJS/Materials and introToThreeJS/Debugging 
