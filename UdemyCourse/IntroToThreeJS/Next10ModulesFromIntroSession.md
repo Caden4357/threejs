@@ -18,3 +18,12 @@
     - More notes in introToThreeJS/Textures
     
 # Materials & Debugging: Refer to the notes in introToThreeJS/Materials and introToThreeJS/Debugging 
+
+# Lights
+- Ambient Light - Lights up everything equally, no shadows
+- Directional Light - Light that shines in a specific direction, like the sun, no matter where you are, the light will always be in the same position.
+- Hemisphere Light - Gradient light, one color on one side, another color on the other side.Top and Bottom in this case.
+- Point Light - Light that shines in all directions, like a light bulb.
+- RectArea Light - Light that shines in a rectangular area, like a tv screen.
+- Spot Light - Light that shines in a cone shape, like a flashlight.
+- Refer to introToThreeJS/Lights for more info
