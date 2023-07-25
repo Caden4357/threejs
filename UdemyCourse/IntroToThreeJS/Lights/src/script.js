@@ -40,7 +40,7 @@ const pointLight = new THREE.PointLight('red', 0.8, 3);
 // * RectAreaLight
 const rectAreaLight = new THREE.RectAreaLight('#5D3FD3', 3,2,2);
 // rectAreaLight.position.set(-1.5, 0, 1.5);
-rectAreaLight.position.z = .5;
+rectAreaLight.position.z = .75;
 // rectAreaLight.lookAt(new THREE.Vector3());
 scene.add(rectAreaLight);
 
@@ -138,7 +138,3 @@ const animate = () => {
   }
 };
 animate();
-
-// while(camera.position.z > 5){
-//   camera.position.z -= 0.01;
-// }

@@ -27,3 +27,13 @@
 - RectArea Light - Light that shines in a rectangular area, like a tv screen.
 - Spot Light - Light that shines in a cone shape, like a flashlight.
 - Refer to introToThreeJS/Lights for more info
+
+# Shadows
+- Shadows are not enabled by default in three.js
+- You need to enable shadows on the renderer, the light, and the object that you want to cast a shadow.
+- Only certain lights can cast shadows, Point light, directional light and the spot light are the lights that can cast shadows.
+- Refer to introToThreeJS/shadows for more info
+# Particles
+- Particles are just a bunch of points in 3D space.
+- You can use a texture to make the particles look like something.
+- Refer to introToThreeJS/particles for more info (Lots of notes and cool effects done in this folder/video)
