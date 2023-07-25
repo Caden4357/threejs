@@ -45,6 +45,8 @@ const camera = new THREE.PerspectiveCamera(75, aspect.width / aspect.height);
 camera.position.z = 3;
 scene.add(camera);
 
+
+
 //Renderer
 const canvas = document.querySelector(".draw");
 const renderer = new THREE.WebGLRenderer({ canvas });
@@ -53,6 +55,23 @@ renderer.setSize(aspect.width, aspect.height);
 //OrbitControls
 const orbitControls = new OrbitControls(camera, canvas);
 orbitControls.enableDamping = true;
+
+// * Raycaster
+const raycaster = new THREE.Raycaster();
+const pointer = new THREE.Vector2();
+window.addEventListener("mousemove", (event) => {
+  pointer.x = (event.clientX / window.innerWidth) * 2 - 1;
+  pointer.y = -(event.clientY / window.innerHeight) * 2 + 1;
+  // console.log(pointer);
+  // * Casting ray
+  raycaster.setFromCamera(pointer, camera); 
+  // * Intersecting
+  const intersects = raycaster.intersectObjects([mesh, mesh2]);
+  console.log(intersects);
+  // for (const intersect of intersects) {
+  //   gsap.to(intersect.object.scale, { x: 2, y: 2, z: 2, duration: 1 });
+  // }
+});
 
 //Clock Class
 const clock = new THREE.Clock();
