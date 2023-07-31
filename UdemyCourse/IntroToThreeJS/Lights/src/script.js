@@ -74,8 +74,8 @@ scene.add(rectAreaLight);
 // gui.add(pointLight.position, "y").min(-5).max(5).step(0.01);
 // gui.add(pointLight.position, "z").min(-5).max(5).step(0.01);
 
-// gui.add(rectAreaLight, "width").min(0).max(7).step(0.01).name("width");
-// gui.add(rectAreaLight, "height").min(0).max(7).step(0.01).name("height");
+gui.add(rectAreaLight, "width").min(0).max(7).step(0.01).name("width");
+gui.add(rectAreaLight, "height").min(0).max(7).step(0.01).name("height");
 
 
 //Resizing

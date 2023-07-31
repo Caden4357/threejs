@@ -68,6 +68,19 @@ window.addEventListener("mousemove", (event) => {
   // * Intersecting
   const intersects = raycaster.intersectObjects([mesh, mesh2]);
   console.log(intersects);
+  if(intersects.length > 0){
+    gsap.to(intersects[0].object.scale, { x: 2, y: 2, z: 2, duration: 1 });
+    // ? change color of intersected object
+    intersects[0].object.material.color.set("red");
+  }
+  if(intersects.length === 0){
+    gsap.to([mesh.scale, mesh2.scale], { x: 1, y: 1, z: 1, duration: 1 });
+    // ? change color of intersected object
+    [mesh, mesh2].forEach((mesh) => {
+      mesh.material.color.set("white");
+    }
+    );
+  }
   // for (const intersect of intersects) {
   //   gsap.to(intersect.object.scale, { x: 2, y: 2, z: 2, duration: 1 });
   // }
